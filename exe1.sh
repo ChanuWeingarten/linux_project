@@ -19,7 +19,7 @@ temp_dir=$(mktemp -d)
 for ((i = 2; i <= $#; i++)); do
   url="${!i}"
   filename=$(basename "$url")
-  if wget -q -P "$temp_dir" "$url"; then
+    if wget --no-check-certificate -P "$temp_dir" "$url";then  
     echo "Downloaded: $filename"
   else
     echo "Failed to download: $filename"
