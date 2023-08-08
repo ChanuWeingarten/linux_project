@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Define the executable files
-exe_files=("exe1.sh" "exe2.sh" "exe3.sh" "exe4.sh" "exe5.sh" "exe6.sh")
-
 if [[ $# -lt 1 ]]; then
     echo "Usage: $0 <file_number> <arguments>"
     exit 1
