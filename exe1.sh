@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Validate input arguments
-if [ $# -lt 2 ]; then
+if [ $# -eq 2 ]; then
   echo "Usage: down_zip.sh <Target Directory> <Image URL1> [<Image URL2> ...]"
   exit 1
 fi

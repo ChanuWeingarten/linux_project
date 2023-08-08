@@ -1,10 +1,9 @@
 #!/bin/bash
-
-if [ $# -ne 2 ]; then
-	echo "Usage: $0 <file> <separator>"
-	exit 1
+echo "$@"
+if [ $# -lt 2 ]; then
+        echo "Usage: $0 <file> <separator>"
+        exit 1
 fi
-
 file="$1"
 separator="$2"
 
