@@ -1,16 +1,14 @@
 #!/bin/bash
 
-# Function to print a 2D array in symmetric format
-print_symmetric_array() {
-  local array1=("$1")  # Get the array
+print_array() {
+  local array1=("$1")
   local rows=("$2")
   local cols=7
   for ((i = 0; i < $rows; i++)); do
     for ((j = 0; j < $cols; j++)); do
-      # Print the element at the current position
-      printf "%5s\t" "${array[$i,$j]}"
+      printf "%6s\t" "${array[$i,$j]}"
     done
-    echo  # Move to the next line
+    echo  
   done
 }
 
@@ -31,7 +29,7 @@ IFS=":" read -ra single_user <<< "$user"
  ((row++))
 done
 
-print_symmetric_array "$array" "$COUNT"
+print_array "$array" "$COUNT"
 }
 
 
